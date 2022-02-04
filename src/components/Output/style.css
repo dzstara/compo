@@ -1,0 +1,20 @@
+.Output--error {
+  color: rgb(182, 0, 0);
+}
+
+.Output--grid {
+  display: grid;
+  white-space: nowrap;
+}
+
+.Output--copy {
+  user-select: text;
+  border: 1px solid var(--color-border-soft);
+  background: #eee;
+  font-size: 0.8em;
+  padding: 1em;
+}
+
+.Output--na {
+  color: #ddd;
+}

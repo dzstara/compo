@@ -1,0 +1,17 @@
+:root {
+  --font: "Readex Pro", sans-serif;
+  --color-background: #fafafa;
+  --color-text: #333;
+  --color-text-subtle: #bbb;
+  --color-border: #ccc;
+  --color-border-soft: #eee;
+
+  --color-green: rgb(13, 180, 13);
+  --color-green-active: rgb(16, 199, 16);
+
+  --color-red: rgb(216, 43, 30);
+  --color-red-active: rgb(245, 51, 45);
+
+  --size-border-radius: 20px;
+  --size-border-radius-soft: 3px;
+}

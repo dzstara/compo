@@ -1,0 +1,28 @@
+.Pref {
+  padding: 0.4em 0.5em;
+  font-weight: 600;
+  min-width: 70px;
+  min-height: 2.1em;
+  border-radius: var(--size-border-radius-soft);
+  color: white;
+}
+
+.Pref--unknown {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.Pref--unknown:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.Pref--yes {
+  background-color: var(--color-green);
+}
+
+.Pref--maybe {
+  background-color: rgb(8, 158, 228);
+}
+
+.Pref--no {
+  background-color: rgb(206, 54, 7);
+}

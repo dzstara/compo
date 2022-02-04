@@ -1,0 +1,7 @@
+.InputGrid {
+  overflow-y: auto;
+}
+
+.InputGrid--pref {
+  cursor: pointer;
+}

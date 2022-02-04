@@ -1,0 +1,67 @@
+.InputList--list {
+  display: flex;
+  list-style-type: none;
+  gap: 0.8em;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.InputList--list:not(:empty) {
+  margin-bottom: 1em;
+}
+
+.InputList--item {
+  display: flex;
+  align-items: stretch;
+  border-radius: 1000px;
+}
+
+.InputList--item > * {
+  background: #eee;
+  padding: 0.3em 0.9em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.InputList--item > span {
+  border-top-left-radius: 1000px;
+  border-bottom-left-radius: 1000px;
+  padding-right: 0.5em;
+}
+
+.InputList--item > button {
+  border-top-right-radius: 1000px;
+  border-bottom-right-radius: 1000px;
+  font-size: 1.2em;
+  border: none;
+  padding-left: 0.5em;
+  padding-right: 0.7em;
+  transition: background-color 0.1s;
+  color: #999;
+}
+
+.InputList--item > button:hover {
+  background: #ddd;
+  color: var(--color-text);
+}
+
+.InputList--input-wrapper {
+  display: flex;
+  gap: 0.3em;
+  align-items: stretch;
+}
+
+.InputList--add {
+  flex: 0 0 auto;
+  padding: 0 0.5em;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.InputList--add:hover {
+  background: #ddd;
+}

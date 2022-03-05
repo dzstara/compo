@@ -12,9 +12,7 @@ export function Pref(props: PrefProps) {
     case PreferenceValue.Maybe:
       return <div className="Pref Pref--maybe">Maybe</div>;
     case PreferenceValue.No:
-      return <div className="Pref Pref--no">No</div>;
-    case PreferenceValue.Unknown:
     default:
-      return <div className="Pref Pref--unknown"></div>;
+      return <div className="Pref Pref--no">No</div>;
   }
 }

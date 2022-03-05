@@ -4,18 +4,26 @@ import { Input } from "../Input";
 import { Output } from "../Output";
 import "./style.css";
 
+const defaultParameters: Parameters = {
+  version: 2,
+  fair: true,
+  members: [],
+  activities: [],
+  preferences: [],
+  exclusivities: [],
+  inclusivities: [],
+};
+
 export function App() {
-  const [parameters, setParameters] = useLocalStorageState<Parameters>(
+  const [rawParameters, setParameters] = useLocalStorageState<Parameters>(
     "parameters",
-    {
-      fair: true,
-      members: [],
-      activities: [],
-      preferences: [],
-      exclusivities: [],
-      inclusivities: [],
-    }
+    defaultParameters
   );
+
+  const parameters =
+    rawParameters.version !== defaultParameters.version
+      ? defaultParameters
+      : rawParameters;
 
   return (
     <div className="App">

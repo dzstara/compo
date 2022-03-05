@@ -7,22 +7,27 @@
   color: white;
 }
 
-.Pref--unknown {
-  background-color: rgba(0, 0, 0, 0.06);
-}
-
-.Pref--unknown:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
 .Pref--yes {
   background-color: var(--color-green);
+}
+
+.Pref--yes:hover {
+  background-color: var(--color-green-active);
 }
 
 .Pref--maybe {
   background-color: rgb(8, 158, 228);
 }
 
+.Pref--maybe:hover {
+  background-color: rgb(0, 168, 247);
+}
+
 .Pref--no {
-  background-color: rgb(206, 54, 7);
+  color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.Pref--no:hover {
+  background-color: rgba(0, 0, 0, 0.08);
 }

@@ -26,7 +26,7 @@ export function InputGrid(props: InputGridProps) {
     const nextPref =
       memberPref === undefined ? lastPref : getNextPref(memberPref);
 
-    if (nextPref !== PreferenceValue.Unknown) setLastPref(nextPref);
+    if (nextPref !== PreferenceValue.No) setLastPref(nextPref);
 
     props.onPreferencesChange([
       ...props.preferences.filter(
@@ -67,7 +67,7 @@ export function InputGrid(props: InputGridProps) {
                 pref={
                   props.preferences.find(
                     (c) => c.activity === activity.id && c.member === member.id
-                  )?.value ?? PreferenceValue.Unknown
+                  )?.value ?? PreferenceValue.No
                 }
               />
             </div>
@@ -85,8 +85,6 @@ function getNextPref(pref: PreferenceValue | undefined) {
     case PreferenceValue.Maybe:
       return PreferenceValue.No;
     case PreferenceValue.No:
-      return PreferenceValue.Unknown;
-    case PreferenceValue.Unknown:
       return PreferenceValue.Yes;
     default:
       return PreferenceValue.Yes;

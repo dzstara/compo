@@ -8,7 +8,6 @@ export enum PreferenceValue {
   Yes,
   Maybe,
   No,
-  Unknown,
 }
 
 export enum Strength {
@@ -23,6 +22,7 @@ export interface Preference {
 }
 
 export interface Parameters {
+  version: number;
   members: Item[];
   activities: Item<number>[];
   preferences: Preference[];

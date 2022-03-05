@@ -14,7 +14,6 @@ export function solver(params: Parameters): Array<Result> {
         (c) =>
           c.activity === map.id &&
           c.member === member.id &&
-          c.value !== PreferenceValue.Unknown &&
           c.value !== PreferenceValue.No
       );
 

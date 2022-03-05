@@ -83,17 +83,27 @@ export function Output(props: OutputProps) {
       <div>
         <h3>Copy paste friendly format:</h3>
         <div className="Output--copy">
-          {results.map((result) => (
-            <Fragment key={result.id}>
-              **{result.name}**
-              <br />
-              {result.participatingMembers
-                .map((member) => member.name)
-                .join(" - ")}
-              <br />
-              <br />
-            </Fragment>
-          ))}
+          {results
+            .map((result) => (
+              <Fragment key={result.id}>
+                **{result.name}**
+                <br />
+                {result.participatingMembers
+                  .map((member) => member.name)
+                  .join(" - ")}
+              </Fragment>
+            ))
+            .flatMap((value, index, array) =>
+              array.length - 1 !== index
+                ? [
+                    value,
+                    <>
+                      <br />
+                      <br />
+                    </>,
+                  ]
+                : value
+            )}
         </div>
       </div>
     </>
